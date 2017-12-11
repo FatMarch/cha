@@ -1,0 +1,10 @@
+<!-- 反正就是各种查！！！ -->
+<page>
+	<view class="page">
+		<view class="page__hd">
+            <view class="page__title">海纳百川啊啊啊</view>
+            <view class="page__desc">不积跬步无以至千里</view>
+		</view>
+	</view>
+    
+</page>

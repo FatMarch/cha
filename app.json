@@ -1,0 +1,42 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/car/index",
+        "pages/subwayCard/index",
+        "pages/query/index",
+        "pages/query/calendar",
+        "pages/query/weather",
+        "pages/feed/index",
+        "pages/logs/logs"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "查！查！查！",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "iconPath": "/source/icon/realtime.png",
+                "selectedIconPath": "/source/icon/realtime-selected.png",
+                "text": "各种查查查"
+            },
+            {
+                "pagePath": "pages/subwayCard/index",
+                "iconPath": "/source/icon/busmap.png",
+                "selectedIconPath": "/source/icon/busmap-selected.png",
+                "text": "查地铁票价"
+            },
+            {
+                "pagePath": "pages/car/index",
+                "iconPath": "/source/icon/line.png",
+                "selectedIconPath": "/source/icon/line-selected.png",
+                "text": "查摇号"
+            }
+        ],
+        "selectedColor": "#09f",
+        "borderStyle": "black"
+    }
+}

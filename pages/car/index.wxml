@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view class='page__hd'>
+    <view class='page__title'>查有没有摇中号！！！</view>
+    <view class='page__desc'>同事开发的，学学！！！</view>
+</view>
+
+<view class='page__bd page__bd_spacing'>
+    
+    <view class="weui-cell weui-cells_after-title">
+        <view class="weui-cell weui-cell_switch">
+            <view class="weui-cell__bd">
+                <text>当前时间</text>
+            </view>
+            <view class="weui-cell__ft ">
+                <text>2017-12-09</text>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,29 @@
+<!--index.wxml-->
+<view class='page__hd'>
+    <view class='page__title'>查地铁票价！！！</view>
+    <view class='page__desc'>并没有什么卵用，就是闹着玩的！！！</view>
+</view>
+
+<view class='page__bd page__bd_spacing'>
+    <view class="weui-cell weui-cells_after-title">
+        <view class="weui-cell weui-cell_switch">
+            <view class="weui-cell__bd">起点站</view>
+            <view class="weui-cell__ft ">
+                <input placeholder='起点站'></input>
+            </view>
+        </view>
+    </view>
+
+    <view class="weui-cell weui-cells_after-title">
+        <view class="weui-cell weui-cell_switch">
+            <view class="weui-cell__bd">终点站</view>
+            <view class="weui-cell__ft">
+                <input placeholder='终点站'></input>
+            </view>
+        </view>
+    </view>
+
+    <view class="page__bd_spacing">
+        <button class='' type='primary'>查询</button>
+    </view>
+</view>

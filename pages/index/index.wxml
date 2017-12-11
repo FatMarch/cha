@@ -1,0 +1,21 @@
+<!-- index -->
+<page>
+    <view class="page">
+        <view class="page__hd">
+            <view class="page__title">当前位置：{{currentCity}}</view>
+            <view class="page__desc">随便点吧，反正没什么卵用。</view>
+        </view>
+    </view>
+
+    <view class="container">
+        <block wx:for="{{ list }}" wx:for-item="group" wx:key="title">
+            <view class="zan-panel-title">{{ group.title }}</view>
+            <view class="zan-panel">
+                <navigator wx:for="{{ group.content }}" wx:key="name" class="zan-cell zan-cell--access" url="{{ item.path }}">
+                    <view class="zan-cell__bd">{{ item.name }}</view>
+                    <view class="zan-cell__ft"></view>
+                </navigator>
+            </view>
+        </block>
+    </view>
+</page>
