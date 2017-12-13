@@ -3,9 +3,8 @@
         "pages/index/index",
         "pages/car/index",
         "pages/subwayCard/index",
-        "pages/query/index",
-        "pages/query/calendar",
-        "pages/query/weather",
+        "pages/calendar/index",
+        "pages/weather/index",
         "pages/feed/index",
         "pages/logs/logs"
     ],

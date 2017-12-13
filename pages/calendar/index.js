@@ -1,4 +1,4 @@
-// pages/query/calendar.js
+// pages/calendar/index.js
 Page({
 
   /**

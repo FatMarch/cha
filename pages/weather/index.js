@@ -1,4 +1,4 @@
-// pages/query/index.js
+// pages/weather/index.js
 Page({
 
   /**
