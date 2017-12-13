@@ -6,6 +6,8 @@
         "pages/calendar/index",
         "pages/weather/index",
         "pages/feed/index",
+        "pages/constellation/index",
+        "pages/birth/index",
         "pages/logs/logs"
     ],
     "window": {

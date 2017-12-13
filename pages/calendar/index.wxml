@@ -1,2 +1,13 @@
 <!--pages/calendar/index.wxml-->
-<text>pages/calendar/index.wxml</text>
+<page>
+    <view class="page">
+        <view class="page__hd">
+            <view class="page__title">万年历</view>
+            <view class="page__desc">简单的万年历</view>
+        </view>
+    </view>
+
+    <view class="zan-cell">
+        当前时间: {{date}}
+    </view>
+</page>

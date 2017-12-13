@@ -1,10 +1,19 @@
 <!-- 反正就是各种查！！！ -->
 <page>
-	<view class="page">
-		<view class="page__hd">
-            <view class="page__title">海纳百川啊啊啊</view>
-            <view class="page__desc">不积跬步无以至千里</view>
-		</view>
-	</view>
-    
+    <view class="page">
+        <view class="page__hd">
+            <view class="page__title">不积跬步无以至千里</view>
+            <view class="page__desc">听君一席话，胜读十年书</view>
+        </view>
+    </view>
+    <form class="formstyle" bindsubmit="formSubmit">
+        <view class="page__bd zan-cell">
+            <textarea placeholder='说点什么吧'>
+            </textarea>
+        </view>
+        <view class='page__bd page__bd_spacing'>
+            <button type='primary' form-type='submit'>提交</button>
+        </view>
+    </form>
+
 </page>

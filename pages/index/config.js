@@ -4,10 +4,10 @@ export default {
         content: [
             {
                 name: '查日历',
-                path: '/pages/query/calendar'
+                path: '/pages/calendar/index'
             }, {
                 name: '查天气',
-                path: '/pages/query/weather'
+                path: '/pages/weather/index'
             }
         ]
     },
@@ -16,11 +16,11 @@ export default {
         content: [
             {
                 name: '查生辰八字',
-                path: '/pages/field/index'
+                path: '/pages/birth/index'
             },
             {
                 name: '查星座运势',
-                path: '/pages/field/index'
+                path: '/pages/constellation/index'
             }
         ]
     },

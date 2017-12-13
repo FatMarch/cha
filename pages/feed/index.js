@@ -62,5 +62,13 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+
+  formSubmit: function() {
+      wx.request({
+          url: 1
+      })
   }
+
+  
 })
