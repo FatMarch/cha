@@ -14,6 +14,7 @@ Page({
     getLocation: function () {
         var page = this
         wx.getLocation({
+            //type: 'wgs84',
             success: function (res) {
                 // success    
                 var longitude = res.longitude

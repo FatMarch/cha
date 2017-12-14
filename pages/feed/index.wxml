@@ -6,13 +6,13 @@
             <view class="page__desc">听君一席话，胜读十年书</view>
         </view>
     </view>
-    <form class="formstyle" bindsubmit="formSubmit">
+    <form class="formstyle" bindsubmit="feed">
         <view class="page__bd zan-cell">
-            <textarea placeholder='说点什么吧'>
+            <textarea name="cont" placeholder='说点什么吧' auto-focus=''>
             </textarea>
         </view>
         <view class='page__bd page__bd_spacing'>
-            <button type='primary' form-type='submit'>提交</button>
+            <button type="primary" form-type='submit'>提交</button>
         </view>
     </form>
 

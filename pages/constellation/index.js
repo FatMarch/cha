@@ -1,4 +1,4 @@
-// pages/feed/index.js
+// pages/constellation/index.js
 Page({
 
   /**
@@ -62,17 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
   
-  },
-
-  feed: function(e) {
-      wx.request({
-          url: 'https://muye.applinzi.com/feed.php',
-          data: e.detail.value,
-          success: function (res) {
-              console.log(res);
-          }
-      })
   }
-
-  
 })

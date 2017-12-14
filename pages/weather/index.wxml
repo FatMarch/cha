@@ -1,2 +1,9 @@
 <!--pages/weather/index.wxml-->
-<text>pages/weather/index.wxml</text>
+<view class="page">
+    <view class='page__title'>
+        北京市
+    </view>
+    <view class="page__desc">
+        天气情况
+    </view>
+</view>
