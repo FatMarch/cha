@@ -1,1 +1,11 @@
 /* pages/calendar/index.wxss */
+text {
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+}
+.success {
+    background: #fea;
+    border-radius: 45px;
+}

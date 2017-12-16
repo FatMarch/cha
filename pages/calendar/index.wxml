@@ -1,13 +1,19 @@
 <!--pages/calendar/index.wxml-->
 <page>
-    <view class="page">
-        <view class="page__hd">
-            <view class="page__title">万年历</view>
-            <view class="page__desc">简单的万年历</view>
-        </view>
+    <view class='zan-cell pull-right'>
+        {{ date }} 星期{{title[dates.week]}}
     </view>
-
-    <view class="zan-cell">
-        当前时间: {{date}}
+    <view class="zan-cell center">
+        <block wx:for="{{ title }}" wx:for-item="item" wx:key="a">
+            <text class='zan-col-3'>{{item}}</text>
+        </block>
+    </view>
+    <view class="zan-cell center" wx:for="{{ calendar }}" wx:key="row">
+        <block wx:for="{{ item }}" wx:key="sm" wx:for-item="info">
+            <text wx:if="{{info.now}}" class='zan-col-3 success'>{{info.day}}</text>
+            <block wx:else>
+            <text class='zan-col-3'>{{info.day}}</text>
+            </block>
+        </block>
     </view>
 </page>

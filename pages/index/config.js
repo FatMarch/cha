@@ -8,6 +8,9 @@ export default {
             }, {
                 name: '查天气',
                 path: '/pages/weather/index'
+            }, {
+                name: '查菜谱',
+                path: '/pages/weather/index'
             }
         ]
     },

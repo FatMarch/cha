@@ -9,7 +9,7 @@ Page({
         currentCity: ''
     },
     onLoad: function (options) {
-        this.getLocation();
+        //this.getLocation();
     },
     getLocation: function () {
         var page = this

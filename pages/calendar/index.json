@@ -1,1 +1,8 @@
-{}
+{
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#efa",
+        "navigationBarTitleText": "查！查！查！",
+        "navigationBarTextStyle": "black"
+    }
+}
