@@ -1,5 +1,11 @@
+import cndate from './getCnDate.js';
+
+/**
+ * 获取年月日等信息
+ */
 function init_date() {
     var date = new Date();
+    
     var dates = {
         year: date.getFullYear(),
         month: date.getMonth() + 1,
@@ -7,12 +13,17 @@ function init_date() {
         hour: date.getHours(),
         minute: date.getMinutes(),
         second: date.getSeconds(),
-        week: date.getDay()
+        week: date.getDay(),
+        is_run: is_run(),
     }
-
+    dates.cnday = cndate.GetLunarDay(dates.year, dates.month, dates.day);
+    
     return dates;
 }
 
+/**
+ * 获取给定日期的'日'字段
+ */
 function get_day(date) {
     var date = new Date(date);
     var day = date.getDate();
@@ -20,6 +31,9 @@ function get_day(date) {
     return day;
 }
 
+/**
+ * 获取每个月多少天
+ */
 function get_month_days(month) {
     var days = 0;
     switch (month) {
@@ -42,6 +56,9 @@ function get_month_days(month) {
     return days;
 }
 
+/**
+ * 获取是不是闰年
+ */
 function is_run(year) {
     if (year % 400 == 0) {
         return true;
@@ -54,6 +71,9 @@ function is_run(year) {
     return false;
 }
 
+/**
+ * 获取当前月日历
+ */
 function calendar() {
     var dates = init_date();
 
@@ -65,18 +85,26 @@ function calendar() {
     var last_week = new Date(last).getDay();
     var last_null = 6 - last_week;
 
-    var pre_month = dates.month - 1 ? dates.month - 1 : 12;
+    var pre_month = dates.month == 1 ? 12 : dates.month - 1;
+    var pre_year = dates.month == 1 ? dates.year - 1 : dates.year;
     var pre_month_days = get_month_days(pre_month);
+    
+    var nxt_month = dates.month == 12 ? 1 : dates.month + 1;
+    var nxt_year = dates.month == 12 ? dates.year + 1: dates.year;
     
     //补全前几天
     var day_set = [];
     var cur_index = 0;
-    day_set[cur_index] = [];
+        day_set[cur_index] = [];
     for (var i = week - 1; i >= 0; i--) {
-        //day_set[cur_index].push(pre_month_days - i);
+        
+        var cnda = cndate.GetLunarDay(pre_year, pre_month, pre_month_days - i);
+        var cnday = cnda.substring(cnda.indexOf('月') + 1);
         var info = {
             month: 'pre',
-            day: pre_month_days - i
+            day: pre_month_days - i,
+            cnda: cnda,
+            cnday: cnday
         };
         day_set[cur_index].push(info);
     }
@@ -86,36 +114,41 @@ function calendar() {
             cur_index++;
             day_set[cur_index] = [];
         }
-       
+        
+        var cnda = cndate.GetLunarDay(dates.year, dates.month, i);
+        var cnday = cnda.substring(cnda.indexOf('月') + 1);
         var info = {
             month: 'cur',
-            day: i
+            day: i,
+            cnda: cnda,
+            cnday: cnday
         };
 
         if (i == dates.day) {
             info.now = 1;
-            console.log(info)
         }
         day_set[cur_index].push(info);
     }
 
     //补全后几天
     for (var i = 1; i <= last_null; i++) {
-        //day_set[cur_index].push(i);
+        var cnda = cndate.GetLunarDay(nxt_year, nxt_month, i);
+        var cnday = cnda.substring(cnda.indexOf('月')+1);
         var info = {
             month: 'nxt',
-            day  : i
+            day  : i,
+            cnda: cnda,
+            cnday: cnday
         };
         day_set[cur_index].push(info);
     }
     console.log(day_set)
-    
     //填充位置
     return day_set;
 }
 
 module.exports = {
-    init: init_date,
-    gday: get_day,
+    init : init_date,
+    gday : get_day,
     calendar: calendar
 }

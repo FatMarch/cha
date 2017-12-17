@@ -1,11 +1,35 @@
 /* pages/calendar/index.wxss */
-text {
+view > text {
     display: block;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    padding:5px 0px 5px 5px;
+    text-align: center;
 }
+
+.info-day {
+    display: block;
+    width: 30px;
+    height: 15px;
+    line-height: 10px;
+    text-align: center;
+}
+
+.info-day-cn {
+    display: block;
+    width: 30px;
+    height: 10px;
+    line-height: 8px;
+    text-align: center;
+    font-size: 12px;
+}
+
 .success {
-    background: #fea;
-    border-radius: 45px;
+    color: #fff;
+    background: #fb0;
+}
+.pull-right {
+    text-align: right;
+    padding-right: 20px; 
 }

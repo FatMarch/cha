@@ -1,7 +1,8 @@
 <!--pages/calendar/index.wxml-->
 <page>
-    <view class='zan-cell pull-right'>
-        {{ date }} 星期{{title[dates.week]}}
+    <view class='zan-cell zan-col-20'>
+        {{ date }} 星期{{title[dates.week]}} 
+        <block style='float:right;'>{{dates.cnday}}</block>
     </view>
     <view class="zan-cell center">
         <block wx:for="{{ title }}" wx:for-item="item" wx:key="a">
@@ -9,10 +10,24 @@
         </block>
     </view>
     <view class="zan-cell center" wx:for="{{ calendar }}" wx:key="row">
-        <block wx:for="{{ item }}" wx:key="sm" wx:for-item="info">
-            <text wx:if="{{info.now}}" class='zan-col-3 success'>{{info.day}}</text>
+        <block wx:for="{{ item }}" wx:key="day-cell" wx:for-item="info">
+            <text id='{{sm}}' wx:if="{{info.now}}" class='zan-col-3 day-cell success' bindtap='cellTap'>
+                <text class='info-day'>{{info.day}}</text>
+                <text class='info-day-cn'>{{info.cnday}}</text>
+            </text>
             <block wx:else>
-            <text class='zan-col-3'>{{info.day}}</text>
+                <block wx:if="{{info.month != 'cur'}}">
+                    <text id="" class='zan-col-3 day-cell gray' bindtap='cellTap'>
+                        <text class='info-day'>{{info.day}}</text>
+                        <text class='info-day-cn'>{{info.cnday}}</text>
+                    </text>
+                </block>
+                <block wx:else>
+                    <text id="" class='zan-col-3 day-cell' bindtap='cellTap'>
+                        <text class='info-day'>{{info.day}}</text>
+                        <text class='info-day-cn gray'>{{info.cnday}}</text>
+                    </text>
+                </block>
             </block>
         </block>
     </view>

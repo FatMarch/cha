@@ -97,3 +97,7 @@ image.banner {
 .center {
     text-align: center;
 }
+
+.gray {
+    color: #bfbfbf;
+}
