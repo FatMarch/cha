@@ -2,8 +2,8 @@
 <page>
     <view class="page">
         <view class="page__hd">
-            <view class="page__title">当前位置：{{currentCity}}</view>
-            <view class="page__desc">随便查点什么吧</view>
+            <view class="page__title">{{date.enday}}</view>
+            <view class="page__desc">{{date.cnday}}</view>
         </view>
     </view>
 

@@ -66,13 +66,31 @@ Page({
 
   feed: function(e) {
       wx.request({
-          url: 'https://muye.applinzi.com/feed.php',
+          url: 'https://api.muyebar.com/SmallFeed/feed',
+          header: {
+              "Content-Type": "application/x-www-form-urlencoded"
+          },
+          method: "POST",
           data: e.detail.value,
           success: function (res) {
-              console.log(res);
+              if (res.data.code === 10000) {
+                  wx.showToast({
+                      title: '提交成功',
+                      icon: 'success',
+                      duration: 2000
+                  })
+              } else {
+                  wx.showModal({
+                      title: res.data.msg,
+                      content: '',
+                      success: function (res) {
+                          if (res.confirm) {
+                              console.log('用户点击确定')
+                          }
+                      }
+                  })
+              }
           }
       })
-  }
-
-  
+   }
 })

@@ -1,4 +1,5 @@
 import config from './config';
+import date_obj from '../../utils/date.js';
 
 Page({
     /**
@@ -6,10 +7,12 @@ Page({
      */
     data: {
         list: config,
-        currentCity: ''
+        currentCity: '',
+        date: date_obj.init()
     },
     onLoad: function (options) {
         //this.getLocation();
+        console.log(date_obj.init() )
     },
     getLocation: function () {
         var page = this
