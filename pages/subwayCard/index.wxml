@@ -5,25 +5,21 @@
 </view>
 
 <view class='page__bd page__bd_spacing'>
-    <view class="weui-cell weui-cells_after-title">
-        <view class="weui-cell weui-cell_switch">
-            <view class="weui-cell__bd">起点站</view>
-            <view class="weui-cell__ft ">
-                <input placeholder='起点站'></input>
-            </view>
+    <view>
+        <view class="zan-panel-title">起点站</view>
+        <view class='zan-panel zan-cell'>
+        <input class='input' type='text' name="start"></input>
         </view>
     </view>
 
-    <view class="weui-cell weui-cells_after-title">
-        <view class="weui-cell weui-cell_switch">
-            <view class="weui-cell__bd">终点站</view>
-            <view class="weui-cell__ft">
-                <input placeholder='终点站'></input>
-            </view>
+    <view>
+        <view class="zan-panel-title">终点站</view>
+        <view class='zan-panel zan-cell'>
+        <input class='input' type='text' name="end"></input>
         </view>
     </view>
-
-    <view class="page__bd_spacing">
+    <view class="zan-panel-title"></view>
+    <view class="">
         <button class='' type='primary'>查询</button>
     </view>
 </view>
