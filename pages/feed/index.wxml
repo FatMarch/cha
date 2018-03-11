@@ -11,9 +11,15 @@
             <textarea name="cont" placeholder='说点什么吧' auto-focus=''>
             </textarea>
         </view>
-        <view class='page__bd page__bd_spacing'>
+        <view class='page__bd_spacing'>
             <button type="primary" form-type='submit'>提交</button>
         </view>
     </form>
+
+    <view class="zan-panel-title">或者您可以直接</view>
+
+    <view class='zan-panel page__bd page__bd_spacing'>
+        <button class="cs_button" open-type="contact" session-from="weapp">联系作者</button>
+    </view>
 
 </page>

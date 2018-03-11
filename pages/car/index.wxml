@@ -5,15 +5,22 @@
 </view>
 
 <view class='page__bd page__bd_spacing'>
-    
-    <view class="weui-cell weui-cells_after-title">
-        <view class="weui-cell weui-cell_switch">
-            <view class="weui-cell__bd">
-                <text>当前时间</text>
-            </view>
-            <view class="weui-cell__ft ">
-                <text>2017-12-09</text>
-            </view>
-        </view>
+    <view class="zan-panel-title">摇号信息查询</view>
+
+    <view class='zan-panel zan-cell'>
+    申请编码: <input class='input' type='text' name="car_no"></input>
+    </view>
+
+    <view class='tip'>
+        <view class="zan-panel-title">目前只支持北京地区的普通指标查询。</view>
+        <view class="zan-panel-title">最后更新时间：2018-03-26</view>
+        <view class="zan-panel-title">下次更新时间：2018-04-26</view>
+        <view class="zan-panel-title">编码有效期为6个月，不要忘记登录官网延长有效期哦~</view>
+        
+        <view class="zan-panel-title">请关注小程序-北京小客车摇号查询小助手，关注最新动态</view>
+    </view>
+    <view class="zan-panel-title"></view>
+    <view class='page__bd page__bd_spacing'>
+        <button type="primary" form-type='submit'>查询</button>
     </view>
 </view>

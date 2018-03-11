@@ -1,1 +1,8 @@
 /* pages/subwayCard/index.wxss */
+.input {
+    padding-left: 0.5rem;
+}
+
+.tip .zan-panel-title{
+    font-size: 12px;
+}
