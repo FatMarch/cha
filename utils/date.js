@@ -17,20 +17,17 @@ function init_date() {
         is_run: is_run()
     };
     dates.cnday = cndate.GetLunarDay(dates.year, dates.month, dates.day);
-    dates.enday = en_time();
+    dates.enday = en_date();
 
     return dates;
 }
 
-function en_time() {
+function en_date() {
     var now = new Date();
 
     var year = now.getFullYear();       //年
     var month = now.getMonth() + 1;     //月
     var day = now.getDate();            //日
-
-    var hh = now.getHours();            //时
-    var mm = now.getMinutes();          //分
 
     var clock = year + "-";
 
@@ -44,13 +41,20 @@ function en_time() {
 
     clock += day + " ";
 
-    if (hh < 10)
-        clock += "0";
-
-    clock += hh + ":";
-    if (mm < 10) clock += '0';
-    clock += mm;
     return (clock);
+}
+
+function time()
+{
+    var date = new Date();
+    var hour = date.getHours();
+    var minute = date.getMinutes();
+    var second = date.getSeconds();
+    if (second < 10) {
+        second = '0' + second;
+    }
+
+    return hour + ':' + minute + ':' + second;
 }
 
 /**
@@ -189,5 +193,6 @@ function calendar() {
 module.exports = {
     init : init_date,
     gday : get_day,
-    calendar: calendar
+    calendar: calendar,
+    time: time
 }

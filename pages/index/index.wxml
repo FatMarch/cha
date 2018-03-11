@@ -2,8 +2,8 @@
 <page>
     <view class="page">
         <view class="page__hd">
-            <view class="page__title">{{date.enday}}</view>
-            <view class="page__desc">{{date.cnday}}</view>
+            <view class="page__title">{{ date.enday }}{{ time }}</view>
+            <view class="page__desc">{{ date.cnday }}</view>
         </view>
     </view>
 

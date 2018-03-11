@@ -7,13 +7,29 @@ Page({
      */
     data: {
         list: config,
-        currentCity: '',
-        date: date_obj.init()
+        currentCity: '北京市',
+        date: date_obj.init(),
+        time: date_obj.time(),
     },
     onLoad: function (options) {
         //this.getLocation();
-        console.log(date_obj.init() )
     },
+    onReady: function (options) {
+        this.interval = setInterval(this.showTime, 1000);
+    },
+    showTime: function() {
+        //循环执行代码
+        let cur_time = date_obj.time();
+        this.setData({
+            time: cur_time,
+        })
+    },
+
+    //页面卸载，清除 
+    onUnload: function () {
+        clearInterval(this.interval)
+    },
+
     getLocation: function () {
         var page = this
         wx.getLocation({
